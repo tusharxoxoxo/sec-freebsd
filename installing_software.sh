@@ -1,4 +1,4 @@
 #!/bin/sh
 
-# Install neovim and wget
-pkg install neovim 
+pkg install neovim drm-kmod
+sysrc kld_list+=amdgpu

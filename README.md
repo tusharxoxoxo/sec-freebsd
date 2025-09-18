@@ -1,0 +1,2 @@
+# sec-freebsd
+secure freebsd

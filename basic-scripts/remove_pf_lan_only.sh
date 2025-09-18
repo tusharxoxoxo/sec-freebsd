@@ -1,6 +1,6 @@
 #!/bin/sh
 # FreeBSD PF firewall removal
-set -e
+set -eu
 
 echo "Removing PF firewall configuration..."
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 # FreeBSD LAN-only firewall setup
-set -e
+set -eu
 
 # Configuration
 LAN_IF="wlan0"

@@ -2,6 +2,7 @@
 
 # Configure /etc/ttys for thin client mode
 # Disable all local shells, enable only X server on vt7
+set -eu
 
 # Backup original ttys file
 cp /etc/ttys /etc/ttys.backup

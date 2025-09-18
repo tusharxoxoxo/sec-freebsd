@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu
 
 # XDMCP configuration for thin client
 JAIL_IP="192.168.68.17"

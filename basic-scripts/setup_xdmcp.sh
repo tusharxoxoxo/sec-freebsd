@@ -7,6 +7,9 @@ JAIL_IP="192.168.68.17"
 # Create X.org configuration directory
 mkdir -p /usr/local/etc/X11/xorg.conf.d
 
+# Create XDM configuration directory
+mkdir -p /etc/X11/xdm
+
 # Create XDM configuration
 cat > /etc/X11/xdm/xdm-config <<EOF
 DisplayManager.requestPort: 0

@@ -4,7 +4,7 @@ set -e
 
 # Configuration
 LAN_IF="wlan0"
-LAN_NET="192.168.68.0/24"
+LAN_NET="192.168.68.0/24" # we can make it more specific if needed  
 
 echo "Setting up PF firewall for LAN-only access..."
 

@@ -3,6 +3,9 @@
 # XDMCP configuration for thin client
 JAIL_IP="192.168.68.17"
 
+# Create X.org configuration directory
+mkdir -p /usr/local/etc/X11/xorg.conf.d
+
 # Create XDM configuration
 cat > /etc/X11/xdm/xdm-config <<EOF
 DisplayManager.requestPort: 0
@@ -74,6 +77,30 @@ XTerm*background: black
 XTerm*foreground: white
 XTerm*scrollBar: true
 XTerm*rightScrollBar: true
+EOF
+
+# Create X.org configuration for thin client
+cat > /usr/local/etc/X11/xorg.conf.d/10-thinclient.conf <<EOF
+Section "ServerLayout"
+    Identifier "ThinClient"
+    Screen 0 "Screen0" 0 0
+EndSection
+
+Section "Screen"
+    Identifier "Screen0"
+    Device "Card0"
+    Monitor "Monitor0"
+EndSection
+
+Section "Device"
+    Identifier "Card0"
+    Driver "amdgpu"
+EndSection
+
+Section "Monitor"
+    Identifier "Monitor0"
+    Option "DPMS"
+EndSection
 EOF
 
 echo "XDMCP configuration completed"
